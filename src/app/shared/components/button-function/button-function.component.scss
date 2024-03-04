@@ -1,0 +1,28 @@
+button {
+    width: 120px;
+    border-radius: 5px;
+    border: 0;
+}
+
+.button-primary {
+    background-color: #038fd1 !important;
+    color: white;
+    font-weight: 400;
+
+}
+
+.content-button {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 15px;
+}
+
+.icon {
+    color: #615f5f;
+    font-weight: 800;
+}
+
+.mat-raised-button {
+    line-height: 0px;
+}

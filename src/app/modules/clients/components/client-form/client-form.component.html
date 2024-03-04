@@ -1,0 +1,87 @@
+<form class="container" [formGroup]="clientForm">
+
+    <section class="title">
+        <span>Formulario de Registro</span>
+    </section>
+
+    <hr>
+
+    <section class="content">
+
+        <div>
+            <label>Name:</label>
+        </div>
+
+        <div>
+            <input type="text" formControlName="name">
+            <span class="input-error"
+                *ngIf="clientForm.get('name')?.errors?.['required'] && (clientForm.get('name')?.dirty || clientForm.get('name')?.touched)">
+                Campo requerido
+            </span>
+            <span class="input-error"
+                *ngIf="!!clientForm.get('name')?.errors?.['minlength'] && (clientForm.get('name')?.dirty || clientForm.get('name')?.touched)">
+                Valor minimo 10 caracteres
+            </span>
+        </div>
+
+        <div>
+            <label>Phone:</label>
+        </div>
+
+        <div>
+            <input type="number" formControlName="phone">
+            <span class="input-error"
+                *ngIf="clientForm.get('phone')?.errors?.['required'] && (clientForm.get('phone')?.dirty || clientForm.get('phone')?.touched)">
+                Campo requerido
+            </span>
+        </div>
+
+        <div>
+            <label>Email:</label>
+        </div>
+
+        <div>
+            <input type="text" formControlName="email">
+            <span class="input-error"
+                *ngIf="clientForm.get('email')?.errors?.['required'] && (clientForm.get('email')?.dirty || clientForm.get('email')?.touched)">
+                Campo requerido
+            </span>
+            <span class="input-error"
+                *ngIf="clientForm.get('email')?.errors?.['email'] && (clientForm.get('email')?.dirty || clientForm.get('email')?.touched)">
+                No es un correo electronico
+            </span>
+        </div>
+
+
+        <div>
+            <label>Start Date:</label>
+        </div>
+
+        <div>
+            <input type="date" formControlName="start_date">
+            <span class="input-error"
+                *ngIf="clientForm.get('start_date')?.errors?.['required'] && (clientForm.get('start_date')?.dirty || clientForm.get('start_date')?.touched)">
+                Campo requerido
+            </span>
+        </div>
+
+        <div>
+            <label>End date:</label>
+        </div>
+
+        <div>
+            <input type="date" formControlName="end_date">
+            <span class="input-error"
+                *ngIf="clientForm.get('end_date')?.errors?.['required'] && (clientForm.get('end_date')?.dirty || clientForm.get('end_date')?.touched)">
+                Campo requerido
+            </span>
+        </div>
+
+    </section>
+    
+    <section class="footer">
+        <app-button-function [text]="'OK'" [disabled]="clientForm.invalid"
+            (click)="createClient()"></app-button-function>
+    </section>
+
+</form>

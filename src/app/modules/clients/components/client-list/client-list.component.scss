@@ -1,0 +1,31 @@
+.container-table {
+    height: max-content;
+    color: black;
+    background-color: white;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 1000;
+    text-align: justify;
+    overflow-x:auto;
+    overflow-y:auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead {
+    height: 60px;
+    background-color: rgb(242, 246, 251);
+}
+
+tbody tr {
+    height:65px;
+    border-top: 1px solid rgb(227, 221, 221);
+    border-bottom: 1px solid rgb(227, 221, 221);
+    
+}
+
+th, td {
+    padding: 1rem;
+}

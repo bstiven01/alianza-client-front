@@ -1,0 +1,29 @@
+.principal-function {
+    display: flex;
+    justify-content: start;
+    gap: 2rem;
+    padding: 1rem;
+}
+
+.filter-function {
+    display: flex;
+    justify-content: start;
+    gap: 2rem;
+    padding: 1rem;
+}
+
+.table-list {
+    padding: 1rem;
+}
+
+@media (max-width: 390px) {
+    .principal-function {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .filter-function {
+        flex-direction: column;
+        align-items: center;
+    }
+}

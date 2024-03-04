@@ -1,0 +1,35 @@
+<h2>Clients</h2>
+
+<section class="container-table">
+    <table>
+        <thead>
+            <tr>
+                <th>Shared Key</th>
+                <th>Business ID</th>
+                <th>E-mail</th>
+                <th>Phone</th>
+                <th>Date Added</th>
+                <th>
+                    <mat-icon>
+                        edit
+                    </mat-icon>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of clients$ | async ">
+                <td>{{item.shared_key}}</td>
+                <td>{{item.name}}</td>
+                <td>{{item.email}}</td>
+                <td>{{item.phone}}</td>
+                <td>{{item.data_added}}</td>
+                <td>
+                    <span class="material-symbols-outlined">
+                        edit
+                    </span>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+</section>

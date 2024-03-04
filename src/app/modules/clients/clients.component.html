@@ -1,0 +1,19 @@
+<section class="principal-function">
+    <app-button-function [text]="'New'" [icon]="'Add'" (click)="openDialog()"></app-button-function>
+    <app-button-function [text]="'Export'" [icon]="'download'"></app-button-function>
+</section>
+
+
+<section class="filter-function">
+    <app-serch-key (search)="filterSearch($event);"></app-serch-key>
+    <app-button-function [text]="'Advanced Search'" [height]="'24px'" (click)="showFormFilter = true"
+        *ngIf="!showFormFilter"></app-button-function>
+</section>
+
+<section *ngIf="showFormFilter" class="filter-function">
+    <app-client-form></app-client-form>
+</section>
+
+<section class="table-list">
+    <app-client-list></app-client-list>
+</section>
